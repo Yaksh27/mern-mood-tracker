@@ -1,0 +1,48 @@
+/* src/App.css */
+.App {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+  background-color: rgb(255, 255, 234);
+
+  font-family: 'Nunito', sans-serif;
+}
+
+.App.dark-mode {
+  background-color: #121212;
+  color: #000000;
+}
+
+.content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Dark mode text color override */
+.dark-mode .content {
+  color: #000000;
+}
+/* src/App.css */
+.content {
+  padding: 30px 20px; /* Increased top padding */
+}
+
+/* src/pages/MoodTracker/MoodTracker.css */
+.mood-grid {
+  gap: 20px; /* Increased gap between mood options */
+  margin: 40px 0; /* More vertical spacing */
+}
+
+/* src/pages/Journal/Journal.css */
+.journal-form {
+  gap: 20px; /* Increased gap between form elements */
+}
+
+.entries-list {
+  gap: 25px; /* Increased gap between journal entries */
+}
+
+/* src/pages/Insights/Insights.css */
+.stats-grid {
+  gap: 25px; /* Increased gap between stat cards */
+}

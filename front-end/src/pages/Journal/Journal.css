@@ -1,0 +1,204 @@
+/* Journal Header */
+.journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+
+/* Journal Stats */
+.journal-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.journal-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Journal Controls */
+.journal-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Search Input — Bigger & Cleaner */
+.search-input {
+  flex: 0.4;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #B3F3F9;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #84361C;
+}
+
+/* Export Button — Bigger & Rounded */
+.export-button {
+  background-color: #B3F3F9;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.export-button:hover {
+  background-color: #8fbcc1;
+  color: rgb(63, 63, 63);
+  transform: translateY(-2px);
+}
+
+/* Form Footer */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Length Indicator */
+.length-indicator {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #9B8EF2;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Textarea — Bigger Typing Space */
+.journal-textarea {
+  width: 100%;
+  padding: 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #B3F3F9;
+  resize: vertical;
+  min-height: 180px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+.headingDailyJournal {
+  color: black; /* Default for light mode */
+}
+
+.dark-mode .headingDailyJournal {
+  color: lightyellow; /* Only overrides in dark mode */
+}
+
+/* Dark Mode Tweaks — Brighter, Less Gloomy */
+.dark-mode .journal-stats,
+.dark-mode .length-indicator {
+  color: #CCCCCC;
+}
+
+.dark-mode .search-input {
+  background-color: #3B3B4F;
+  color: #EAEAEA;
+  border-color: #A2563A;
+}
+
+.dark-mode .export-button {
+  background-color: #A2563A;
+  color: #fff;
+}
+
+.dark-mode .submit-button {
+  background-color: #A2563A;
+  color: #fff;
+}
+
+.dark-mode .journal-textarea {
+  background-color: #3B3B4F;
+  color: #EAEAEA;
+  border-color: #A2563A;
+}
+
+/* Prompt animation style */
+.animated-placeholder {
+  font-size: 1rem;
+  color: #373737;
+  font-style: italic;
+  margin-bottom: 8px;
+  min-height: 20px;
+  text-align: left;
+  padding-left: 4px;
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Fade-in for entries */
+.fade-in-entry {
+  animation: fadeInEntry 0.5s ease forwards;
+}
+
+@keyframes fadeInEntry {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* JournalEntry hover (if your component allows) */
+.fade-in-entry:hover {
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
+
+/* General improvements */
+.journal-textarea:focus,
+.search-input:focus {
+  border-color: #9B8EF2;
+  box-shadow: 0 0 0 3px rgba(155, 142, 242, 0.2);
+  outline: none;
+}
+
+.journal-textarea {
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:active {
+  transform: scale(0.97);
+}

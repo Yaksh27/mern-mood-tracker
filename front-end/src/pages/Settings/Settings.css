@@ -1,0 +1,125 @@
+.settings-page {
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.settings-page h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.dark-mode .settings-page h1 {
+  color: #ffffff;
+}
+
+.settings-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.settings-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.dark-mode .settings-card {
+  background-color: #2E2E2E;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.settings-card h2 {
+  font-size: 1.25rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.dark-mode .settings-card h2 {
+  color: #fff;
+  border-bottom-color: #444;
+}
+
+.setting-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 0;
+  font-size: 1rem;
+}
+
+.setting-option label {
+  color: #444;
+}
+
+.dark-mode .setting-option label {
+  color: #ddd;
+}
+
+.theme-select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #B3F3F9;
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+
+.dark-mode .theme-select {
+  background-color: #3A3A3A;
+  color: #ffffff;
+  border-color: #84361C;
+}
+
+.toggle {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: #9B8EF2;
+}
+
+.logout-button,
+.delete-button {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border: none;
+}
+
+.logout-button {
+  background-color: #F6B092;
+  color: #333;
+}
+
+.logout-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.dark-mode .logout-button {
+  background-color: #84361C;
+  color: white;
+}
+
+.delete-button {
+  background-color: #FF6B6B;
+  color: white;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #e14c4c;
+  transform: translateY(-2px);
+}
+
+.dark-mode .delete-button {
+  background-color: #C03C3C;
+}

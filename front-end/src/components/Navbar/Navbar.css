@@ -1,0 +1,151 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px; /* Uses increased top padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(220, 244, 209);
+}
+
+.navbar.dark-mode {
+  background-color: #1E1E1E;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-logo {
+  text-decoration: none;
+}
+
+.logo-part1,
+.logo-part2 {
+  color: #84361C;
+  font-size: larger;
+}
+
+.navbar.dark-mode .logo-part1,
+.navbar.dark-mode .logo-part2 {
+  color: #F6B092;
+}
+
+.nav-links {
+  display: flex;
+  font-size: large;
+  gap: 65px; /* Uses increased gap between links */
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333333;
+  position: relative;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #84361C;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #84361C;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dark mode adjustments for nav links */
+.navbar.dark-mode .nav-link {
+  color: #ffffff;
+}
+
+.navbar.dark-mode .nav-link:hover {
+  color: #D3D3FF;
+}
+
+.navbar.dark-mode .nav-link::after {
+  background-color: #D3D3FF;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border-color:rgb(134, 134, 134);
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #D3D3FF;
+  color: #000000;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+.navbar.dark-mode .theme-toggle {
+  background-color: #84361C;
+  color: #ffffff;
+}
+/* Action button container */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+/* Theme toggle button — match size & feel */
+.theme-toggle {
+  padding: 8px 16px;
+  border: 2px solid #84361C;
+  border-radius: 20px;
+  background-color: #D3D3FF;
+  color: #1E1E1E;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+.get-started-btn {
+  background-color: #84361C;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.get-started-btn:hover {
+  background-color: #6f2f17;
+  transform: translateY(-2px);
+}
+
+.dark-mode .get-started-btn {
+  background-color: #F6B092;
+  color: #1E1E1E;
+}
+
+.dark-mode .get-started-btn:hover {
+  background-color: #e79f7e;
+}
